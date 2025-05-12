@@ -44,7 +44,7 @@ def get_info_from_username(username):
     if username:
         res = execute(f"SELECT Username, CreationDate FROM Accounts WHERE Username = '{username}'")
         if res:
-            return res
+            return res[0]
 
     return False
 
